@@ -1,0 +1,19 @@
+{
+  "name": "expedia-static-data-bg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hfadili-berkeley-systems/expedia-static-data-bg.git"
+  },
+  "author": "Nuitée Travel LTD <hfadili@berkeley.systems>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hfadili-berkeley-systems/expedia-static-data-bg/issues"
+  },
+  "homepage": "https://github.com/hfadili-berkeley-systems/expedia-static-data-bg#readme"
+}
