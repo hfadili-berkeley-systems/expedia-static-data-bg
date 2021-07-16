@@ -11,8 +11,8 @@ function loadData() {
             counter++;
         }
         let fileName = 'expedia' + indexString;
-        //console.log('gsutil cp '+fileName+'.jsonl gs://expedia-static-data');
-        console.log('bq load --source_format=NEWLINE_DELIMITED_JSON suppliers_dashboard._expedia_static_data gs://expedia-static-data/'+fileName+'.jsonl');
+        console.log('gsutil cp '+fileName+'.jsonl gs://expedia-static-data');
+        //console.log('bq load --source_format=NEWLINE_DELIMITED_JSON suppliers_dashboard._expedia_static_data gs://expedia-static-data/'+fileName+'.jsonl');
         index++;
         loadData(index);
     }
