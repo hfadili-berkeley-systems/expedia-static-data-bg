@@ -1,4 +1,4 @@
-split -l 20000 $1 splited_files/ 
+split -l 1000000 $1 splited_files/ 
 node app.js
 
 cd ./generated_json
