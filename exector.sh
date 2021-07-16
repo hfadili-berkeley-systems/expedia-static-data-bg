@@ -1,4 +1,4 @@
-sudo split 80000 $1 splited_files/ 
+sudo split -l 80000 $1 splited_files/ 
 sudo node app.js
 
 cd ./generated_json
