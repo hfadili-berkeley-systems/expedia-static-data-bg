@@ -89,7 +89,7 @@ function loadData() {
                   });
                 }
               }
-              roomObj.amenities = amenities;
+              roomObj.amenities_list = amenities;
               jsonLine += JSON.stringify(roomObj) + "\n";
             }
           }
