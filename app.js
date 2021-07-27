@@ -84,7 +84,7 @@ function loadData() {
               if (room.amenities !== undefined) {
                 for (const [key, amenity] of Object.entries(room.amenities)) {
                   amenities.push({
-                    id: amenity.id,
+                    id: parseInt(amenity.id),
                     name: amenity.name,
                   });
                 }
