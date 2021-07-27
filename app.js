@@ -2,7 +2,13 @@ var fs = require("fs");
 const readline = require("readline");
 
 function loadData() {
-  
+  let listFiles = [];
+  fs.readdirSync("./splited_files/").forEach((file) => {
+    let fileName = file;
+    listFiles.push(fileName);
+  });
+  console.log(listFiles);
+  /*
   fs.readdirSync("./splited_files/").forEach((file) => {
     let fileName = file;
     console.log("Start reading file",fileName);
@@ -106,10 +112,10 @@ function loadData() {
           jsonLine,
           function (err) {
             if (err) return console.log(err);
-            console.log("File generated> " + fileName + ".jsonl");
+            console.log("File generated > " + fileName + ".jsonl");
           }
         );
       });
-  });
+  });*/
 }
 loadData();
