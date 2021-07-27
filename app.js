@@ -3,6 +3,7 @@ const readline = require("readline");
 function loadData() {
   fs.readdirSync("./splited_files/").forEach((file) => {
     let fileName = file;
+    console.log("Start reading file",fileName);
     const readInterface = readline.createInterface({
       input: fs.createReadStream("./splited_files/" + fileName),
       console: false,
@@ -96,6 +97,8 @@ function loadData() {
         } catch (e) {}
       })
       .on("close", function () {
+        console.log("Reading file",fileName,"completed");
+        console.log("Write file",fileName+".jsonl");
         fs.writeFile(
           "generated_json/" + fileName + ".jsonl",
           jsonLine,
