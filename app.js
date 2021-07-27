@@ -1,13 +1,9 @@
 var fs = require("fs");
 const readline = require("readline");
-async function asyncForEach(array, callback) {
-  for (let index = 0; index < array.length; index++) {
-      await callback(array[index], index, array);
-  }
-}
-async function loadData() {
+
+function loadData() {
   
-  await asyncForEach(fs.readdirSync("./splited_files/"),(file) => {
+  fs.readdirSync("./splited_files/").forEach((file) => {
     let fileName = file;
     console.log("Start reading file",fileName);
     const readInterface = readline.createInterface({
