@@ -79,6 +79,17 @@ function loadData() {
                 });
               }
               roomObj.images = images;
+
+              let amenities = [];
+              if (room.amenities !== undefined) {
+                for (const [key, amenity] of Object.entries(room.amenities)) {
+                  amenities.push({
+                    id: amenity.id,
+                    name: amenity.name,
+                  });
+                }
+              }
+              roomObj.amenities = amenities;
               jsonLine += JSON.stringify(roomObj) + "\n";
             }
           }
