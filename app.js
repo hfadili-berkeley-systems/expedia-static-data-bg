@@ -5,7 +5,7 @@ async function asyncForEach(array, callback) {
       await callback(array[index], index, array);
   }
 }
-function loadData() {
+async function loadData() {
   
   await asyncForEach(fs.readdirSync("./splited_files/"),(file) => {
     let fileName = file;
