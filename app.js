@@ -6,7 +6,7 @@ async function asyncForEach(array, callback) {
       await callback(array[index], index, array);
   }
 }
-function loadData() {
+async function  loadData() {
   let listFiles = [];
   
   fs.readdirSync("./splited_files/").forEach((file) => {
@@ -14,7 +14,8 @@ function loadData() {
     listFiles.push(fileName);
   });
   console.log(listFiles);
-  asyncForEach(listFiles,async(fileName)=>{
+  await asyncForEach(listFiles,async(fileName)=>{
+    console.log("Start processing",fileName);
     const readInterface = await readline.createInterface({
       input: fs.createReadStream("./splited_files/" + fileName),
       console: false,
